@@ -1,0 +1,31 @@
+//REM
+@function rem($px) {
+	$result: math.div($px, 16) + rem;
+	@return $result;
+}
+//EM
+@function em($px, $current: 16) {
+	$result: math.div($px, $current) + em;
+	@return $result;
+}
+
+
+@mixin logo{
+	color: #F8F9FA;
+	line-height: 1.38;
+	font-size: 18px;
+	font-weight: 700;
+	&::after{
+		content: ".";
+		color: #DDBEA9;
+	}
+}
+
+@mixin data{
+	transition: color 0.3s;
+	@media (any-hover:hover ){
+		&:hover{
+			color: #dd9260;
+		}
+	}
+}
