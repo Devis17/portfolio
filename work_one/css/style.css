@@ -321,6 +321,9 @@ body {
   }
 }
 
+.page__change {
+  margin-bottom: 6.25rem;
+}
 .page__main {
   position: relative;
   height: 100vh;
