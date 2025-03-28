@@ -1,0 +1,60 @@
+//REM
+@function rem($px) {
+	$result: math.div($px, 16) + rem;
+	@return $result;
+}
+//EM
+@function em($px, $current: 16) {
+	$result: math.div($px, $current) + em;
+	@return $result;
+}
+
+@mixin title{
+	font-size: rem(55);
+	color: #231900;
+	font-weight: 600;
+	text-align: center;
+}
+
+@mixin button{
+    display: inline-block;
+    padding: rem(13) rem(46);
+    background-color: #FFCC00;
+    color: #fff;
+    position: relative;
+    z-index: 3;
+}
+
+@mixin general{
+	border-radius: 50%;
+    display: inline-block;
+    width: rem(115);
+    height: rem(115);
+    background-color:#fff;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+@mixin top-content{
+    font-weight: 600;
+    color: #FC0;
+    font-size: rem(18);
+    line-height: normal;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+@mixin title_change{
+    font-weight: 600;
+    text-align: center;
+    line-height: normal;
+    font-size: rem(55);
+    @media (max-width: em(700)){
+      font-size: rem(40);
+    }
+    @media (max-width: em(400)){
+      font-size: rem(30);
+    }
+}
